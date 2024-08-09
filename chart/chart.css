@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    font-family: "Inter", cursive;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+
+.chart {
+    position: relative;
+    max-width: 400px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    font-weight: bold;
+}
+
+.lines {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.line {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.num {
+    font-weight: 500;
+}
+
+.filler {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.fill {
+    width: 40%;
+    height: 50%;
+    background-color: var(--accent);
+    border-radius: 100vw;
+}

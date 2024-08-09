@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chart/chart.css">
+    <link rel="stylesheet" href="cube.css">
+    <script type="module" src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/30d2125a90.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="scramble"></div>
+        <div class="settings"><i class="fa-solid fa-bars"></i></div>
+    </header>
+    <div class="avgTimes">
+        <div class="bestSingle">Best: 16.37</div>
+        <div class="Mean3">Mean of 3: 16.37</div>
+        <div class="Avg5">Average of 5: 17.69</div>
+        <div class="Avg12">Average of 12: 19.42</div>
+    </div>
+    <div class="timer">
+        <div class="time">0.000</div>
+    </div>
+    <div class="chartContainer"></div>
+    <div class="scrambleDisplayContainer">
+        <div class="blank"></div>
+        <div class="center">
+            <div class="white"></div>
+            <div class="white"></div>
+            <div class="white"></div>
+            <div class="white"></div>
+            <div class="white"></div>
+            <div class="white"></div>
+            <div class="white"></div>
+            <div class="white"></div>
+            <div class="white"></div>
+        </div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="center">
+            <div class="orange"></div>
+            <div class="orange"></div>
+            <div class="orange"></div>
+            <div class="orange"></div>
+            <div class="orange"></div>
+            <div class="orange"></div>
+            <div class="orange"></div>
+            <div class="orange"></div>
+            <div class="orange"></div>
+        </div>
+        <div class="center">
+            <div class="green"></div>
+            <div class="green"></div>
+            <div class="green"></div>
+            <div class="green"></div>
+            <div class="green"></div>
+            <div class="green"></div>
+            <div class="green"></div>
+            <div class="green"></div>
+            <div class="green"></div>
+        </div>
+        <div class="center">
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+        </div>
+        <div class="center">
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+        </div>
+        <div class="blank"></div>
+        <div class="center">
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+        </div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="darker"></div>
+    <div class="settingsPanel">
+        <div class="title">Settings Panel</div>
+        <div class="settingsClose"><i class="fa-solid fa-xmark"></i></div>
+        <div class="setting">
+            <div class="settingTitle">Dark Mode</div>
+            <div class="toggle">
+                <button class="dark">Dark</button>
+                <button class="light selected">Light</button>
+            </div>
+        </div>
+        <div class="setting">
+            <div class="settingTitle">Scramble Length</div>
+            <input type="number" class="scrambleLength">
+        </div>
+        <div class="setting">
+            <div class="settingTitle">Time while solving</div>
+            <div class="toggle">
+                <button class="full selected">Decimal</button>
+                <button class="whole">Whole</button>
+                <button class="hidden">Hidden</button>
+            </div>
+        </div>
+        <div class="setting">
+            <div class="settingTitle">Extra tool</div>
+            <div class="toggle">
+                <button class="graph selected">Graph</button>
+                <button class="scrambleSetting">Scramble</button>
+                <button class="noTool">None</button>
+            </div>
+        </div>
+        <div class="setting">
+            <div class="settingTitle">Hide elements when solving</div>
+            <div class="toggle">
+                <button class="hideElem selected">Yes</button>
+                <button class="showElem">No</button>
+            </div>
+        </div>
+        <div class="setting">
+            <div class="settingTitle">Reset Session</div>
+            <button class="resetSession">Reset</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--19.31-->
