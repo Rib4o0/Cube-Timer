@@ -1,0 +1,55 @@
+.scrambleDisplayContainer {
+    max-width: 400px;
+    width: calc(100vw - 40px);
+    aspect-ratio: 4/3;
+    background-color: var(--lighter-shade);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 10px;
+    gap: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 5px;
+}
+
+.green {
+    background-color: #3FDF41FF;
+}
+
+.yellow {
+    background-color: #ffe14b;
+}
+
+.red {
+    background-color: #FF2B2BFF;
+}
+
+.blue {
+    background-color: #2e2ef8;
+}
+
+.white {
+    background-color: white;
+}
+
+.orange {
+    background-color: #e4762f;
+}
+
+.center {
+    width: 100% ;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3px;
+}
+
+.center > div {
+    border-radius: 2px;
+}
+
+/*
+    This file makes sure the cube is displayed properly
+*/
