@@ -1,3 +1,4 @@
-public/cube.css
-public/cube.html
-public/cube.js
+package-lock.json
+package.json
+server.js
+.idea
