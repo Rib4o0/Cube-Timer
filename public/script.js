@@ -279,14 +279,14 @@ window.addEventListener("keyup", e => {
                     header.classList.add("hide");
                     chartContainer.classList.add("hide");
                     avgTimes.classList.add("hide");
-                    scrambleDisplayContainer.add("hide")
+                    scrambleDisplayContainer.classList.add("hide")
                 }
                 updateTimerInterval = setInterval(() => {
                     if (timeDisplayMethod === "full") {
                         timeText.textContent = getElapsedTime().seconds + "." + (getElapsedTime().milliseconds.toString().substring(0,1));
                     } else if (timeDisplayMethod === "whole") {
                         timeText.textContent = getElapsedTime().seconds.toString();
-                    } else {
+                    } else if ("hidden") {
                         timeText.textContent = "Solving";
                     }
                 }, 100)
