@@ -46,6 +46,8 @@ header {
 
 .scramble {
     font-size: 24px;
+    width: 60%;
+    text-align: center;
 }
 
 .gettingReady {
@@ -85,6 +87,7 @@ header {
 
 .settingsPanel {
     width: 25vw;
+    min-width: 30vh;
     background-color: var(--background);
     position: fixed;
     top: 50%;
@@ -181,4 +184,32 @@ header {
 .hide, .permahide {
     opacity: 0;
     pointer-events: none;
+}
+
+.times {
+
+}
+
+@media (max-width: 600px) {
+    .scramble {
+        font-size: 16px;
+    }
+
+    .avgTimes {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .avgTimes > div {
+        text-align: center;
+    }
+
+    .scrambleDisplayContainer {
+        width: 90%;
+    }
 }

@@ -68,7 +68,8 @@ let cube = [
 ];
 
 function generateScramble() {
-    const moves = ["U", "L", "R", "F"];
+    resetCube()
+    const moves = ["U", "L", "R", "F", "D"];
     const modifiers = ["", "'", "2"];
     let scramble = [];
     let lastMove = "";
@@ -83,7 +84,22 @@ function generateScramble() {
         scramble.push(move + modifier);
     }
 
-    for (let move of scramble) {
+    // scramble = ["R", "U'", "R'", "U'", "R", "U", "R", "D", "R'", "U'","R","D'","R'","U2","R'","U'"];
+    //U' L' D' F2 L' U2 D' F2 R D2 U' D2 L F D' L2
+
+    // for (let move of scramble) {
+    //     let multiplier = 1;
+    //     if (move.charAt(move.length - 1) === "2") {
+    //         multiplier = 2;
+    //     } else if (move.charAt(move.length - 1) === "'") {
+    //         multiplier = 3
+    //     }
+    //     for (let i = 0; i < multiplier; i++) rotateCube(move.charAt(0));
+    // }
+    let numOfMoves = scramble.length;
+    let currentMove = 0;
+    let moveExecution = setInterval(() => {
+        let move = scramble[currentMove];
         let multiplier = 1;
         if (move.charAt(move.length - 1) === "2") {
             multiplier = 2;
@@ -91,7 +107,9 @@ function generateScramble() {
             multiplier = 3
         }
         for (let i = 0; i < multiplier; i++) rotateCube(move.charAt(0));
-    }
+        currentMove++;
+        if (currentMove >= numOfMoves) {clearInterval(moveExecution); }
+    },10)
 
     scrambleDisplay.textContent = scramble.join(" ");
 }
@@ -146,6 +164,8 @@ hiddenModeBtn.addEventListener("click", () => {
 
 scrLenInput.addEventListener("input", e => {
     scrambleLength = parseInt(e.target.value);
+    if (scrambleLength > 99) scrambleLength = 99
+    e.target.value = scrambleLength;
     generateScramble();
     saveSettings()
 })
@@ -235,6 +255,7 @@ window.addEventListener("keydown", e => {
                     header.classList.remove("hide");
                     chartContainer.classList.remove("hide");
                     avgTimes.classList.remove("hide");
+                    scrambleDisplayContainer.remove("hide")
                 }
                 updateAverages()
                 updateTimesChart()
@@ -258,6 +279,7 @@ window.addEventListener("keyup", e => {
                     header.classList.add("hide");
                     chartContainer.classList.add("hide");
                     avgTimes.classList.add("hide");
+                    scrambleDisplayContainer.add("hide")
                 }
                 updateTimerInterval = setInterval(() => {
                     if (timeDisplayMethod === "full") {
@@ -554,6 +576,7 @@ function rotateCube(turn) {
             cube[2][3] = temp[1];
             cube[2][6] = temp[2];
             break;
+
         case "B":
             // Rotate the back face clockwise
             temp = cube[3][0];
@@ -582,6 +605,7 @@ function rotateCube(turn) {
             cube[2][3] = temp[1];
             cube[2][6] = temp[2];
             break;
+
 
     }
     displayCube();
