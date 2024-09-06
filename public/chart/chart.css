@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 * {
-    font-family: "Inter", cursive;
+    /*font-family: "Inter", cursive;*/
 }
 
 body {
@@ -25,6 +25,8 @@ body {
     border-radius: 10px;
     border: 2px solid var(--border);
     font-weight: bold;
+    background: var(--background);
+    backdrop-filter: blur(70px);
 }
 
 .lines {

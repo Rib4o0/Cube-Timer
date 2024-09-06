@@ -2,7 +2,8 @@
     max-width: 400px;
     width: calc(100vw - 40px);
     aspect-ratio: 4/3;
-    background-color: var(--lighter-shade);
+    background-color: var(--background);
+    border: 2px solid var(--border);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);

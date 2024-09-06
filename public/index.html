@@ -17,21 +17,18 @@
         <div class="scramble"></div>
         <div class="settings"><i class="fa-solid fa-bars"></i></div>
     </header>
-    <div class="avgTimes">
-        <div class="bestSingle">Best: 16.37</div>
-        <div class="Mean3">Mean of 3: 16.37</div>
-        <div class="Avg5">Average of 5: 17.69</div>
-        <div class="Avg12">Average of 12: 19.42</div>
-<!--        <button class="showTimes">Show Times</button>-->
+    <div class="bottom-left">
+        <div class="showHideTimes">Show times</div>
+        <div class="times"></div>
     </div>
-<!--    <div class="times">-->
-<!--        <div class="solve">-->
-<!--            <div class="num">1</div>-->
-<!--            <div class="solveTime">19.38</div>-->
-<!--        </div>-->
-<!--    </div>-->
     <div class="timer">
         <div class="time">0.000</div>
+        <div class="avgTimes">
+            <div class="bestSingle">Best: 16.37</div>
+            <div class="Mean3">Mean of 3: 16.37</div>
+            <div class="Avg5">Average of 5: 17.69</div>
+            <div class="Avg12">Average of 12: 19.42</div>
+        </div>
     </div>
     <div class="chartContainer"></div>
     <div class="scrambleDisplayContainer">
@@ -113,8 +110,9 @@
         <div class="title">Settings Panel</div>
         <div class="settingsClose"><i class="fa-solid fa-xmark"></i></div>
         <div class="setting">
-            <div class="settingTitle">Dark Mode</div>
+            <div class="settingTitle">Theme</div>
             <div class="toggle">
+                <button class="mono">Mono</button>
                 <button class="dark">Dark</button>
                 <button class="light selected">Light</button>
             </div>
@@ -147,10 +145,59 @@
             </div>
         </div>
         <div class="setting">
+            <div class="settingTitle">Dynamic Lights</div>
+            <div class="toggle">
+                <button class="fullDynamic selected">Full</button>
+                <button class="partialDynamic">Partial</button>
+                <button class="noneDynamic">None</button>
+            </div>
+        </div>
+        <div class="setting">
             <div class="settingTitle">Reset Session</div>
             <button class="resetSession">Reset</button>
         </div>
     </div>
+    <div class="notification">
+        <img src="https://media.giphy.com/media/d6UbuwWVKJHXO/giphy.gif" alt="">
+        <div class="text">New best single: 13.321</div>
+    </div>
+    <div class="solveEditPanel">
+        <div class="title">Solve 14</div>
+        <div class="middle">
+            <div class="solveTime">19.31</div>
+            <div class="compToAvg">
+                <div class="amount">-2.13</div>
+                <div class="text">Below session average</div>
+            </div>
+            <div class="modifier">+2</div>
+        </div>
+        <div class="dynamicLight1"></div>
+        <div class="dynamicLight2"></div>
+        <div class="alternateTimes">
+            <div class="alternateTime atmo3">
+                <div class="title">Mean of 3</div>
+                <div class="timeText">18.69</div>
+            </div>
+            <div class="alternateTime atao5">
+                <div class="title">Average of 5</div>
+                <div class="timeText">17.58</div>
+            </div>
+            <div class="alternateTime atao12">
+                <div class="title">Average of 12</div>
+                <div class="timeText">20.41</div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="ok">OK</div>
+            <div class="plus2">+2</div>
+            <div class="dnf">DNF</div>
+            <div class="del">Delete</div>
+        </div>
+        <div class="settingsClose solveClose"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+    <div class="ball1"></div>
+    <div class="ball2"></div>
+<!--    <div class="ball3"></div>-->
 </body>
 </html>
 
